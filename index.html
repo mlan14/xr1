@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Module 01</title>
+	<meta name="description" content="Hello, WebVR! • A-Frame">
+	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+<body>
+	<h1>My Awesome Website</h1>
+	<a-scene background="color: #FAFAFA">
+     <a-cylinder position="7.88263 -1.83015 -3.86599" scale="-0.33141 0.5 0.2144" radius="1.25" color="#E27A1D" metalness="0" wireframe="false" material="color: #00e2cb" geometry="radius: 2.29"></a-cylinder>
+     <a-cylinder position="4.74549 1.3166 -4.63061" scale="0.5 0.5 0.5" radius="1.25" color="#E27A1D" metalness="0" wireframe="false" material="color: #e22600" geometry="radius: 2.29"></a-cylinder>
+     <a-sphere position="4.93617 -2.33209 -10.2311" scale="0.5 0.5 0.1791" radius="1.25" color="green" metalness="0" wireframe="false" material="" geometry="">
+      </a-sphere>
+      <a-torus position="2.98311 -0.70459 -6.95762" scale="0.33874 0.33874 0.17424" radius="1.25" color="#228B22" metalness="0" wireframe="false" material="" geometry=""></a-torus>
+      <a-sphere position="2 1 -7.57978" scale="0.2757 0.2757 0.2757" radius="1.25" color="#1C55C6" metalness=".75" wireframe="false" segments-height="6" material="color: #ffd700; emissive: #808080" geometry=""></a-sphere>
+      <a-icosahedron position="0.11576 2.98839 -2.96135" scale="0.5 0.5 0.5" radius="1.25" color="#EFCE10" metalness="0" wireframe="false" material="color: #97646c" geometry=""></a-icosahedron>
+      <a-sphere position="-0.85704 1.74747 -5.78522" scale="0.14165 0.14165 0.14165" radius="1.25" color="#1C55C6" metalness=".25" wireframe="false" material="color: #beac15" geometry="">
+      </a-sphere>
+      <a-sphere position="-3.24038 -2.7807 -9.27146" scale="0.5 0.5 0.25212" radius="1.25" color="#1C55C6" metalness=".25" wireframe="false" material="color: #6ebe59" geometry="">
+      </a-sphere>
+      <a-sphere position="-4.08306 1 -4.27197" scale="0.5 0.5 0.23533" radius="1.25" color="#1C55C6" metalness=".25" wireframe="false" material="" geometry="">
+      </a-sphere>
+      <a-torus position="-6.83374 -3.01148 -8.57862" scale="0.5 0.5 0.5" radius="1.25" color="#228B22" metalness="0" wireframe="false" material="color: #f5cfd5" geometry=""></a-torus>
+      <a-icosahedron position="-6.55526 1.74633 -5.88935" scale="0.3 0.3 0.3" radius="1.25" color="#EFCE10" metalness="0" wireframe="false" material="color: #4fb7b7" geometry=""></a-icosahedron>
+      <a-icosahedron position="-6.55526 1.74633 -5.88935" scale="0.3 0.3 0.3" radius="1.25" color="#EFCE10" metalness="0" wireframe="false" material="color: #4fb7b7" geometry=""></a-icosahedron>
+     <a-plane position="-0.03012 3.7638 -0.38423" scale="28.37897 23.92471 6.4131" radius="1.25" color="#ACD62A" metalness="0" wireframe="false" rotation="88.68813710830013 180 -90.01568031961824" material="color: #7f4e19; emissive: #5d3108" geometry=""></a-plane>
+       <a-assets>
+        <img id="my-image" src="img/bg.jpeg">
+      </a-assets>
+      <a-curvedimage src="#my-image" height="10.0" radius="12" theta-length="120" rotation="0 52.73446250604585 0" scale="0.8679 0.8679 0.8679" material="" geometry="radius: 15; segmentsRadial: 50; thetaLength: 400; thetaStart: 30"></a-curvedimage>
+    <a-plane position="-0.03141 -3.98937 -4.20579" scale="37.69991 26.85401 6.4131" radius="1.25" color="#ACD62A" metalness="0" wireframe="false" rotation="-89.99963750135457 90 0" material="color: #7f4e19; emissive: #5d3108" geometry=""></a-plane>
+
+
+      
+    </a-scene>
+
+   
+    <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane> -->
+
+    <!--  <a-scene background="color: #E31C1C">
+    <a-sphere position="-4 1 -5" scale=".5 .5 .5" radius="1.25" color="#32CD32" metalness="0" wireframe="false">
+    </a-sphere>
+    <a-sphere position="-2 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness=".25" wireframe="false">
+    </a-sphere>
+    <a-sphere position="0 1 -5" scale=".5 .5 .5" radius="1.25" color="#D41252" metalness=".5" emissive="#32CD32"
+      wireframe="false" segments-height="4" segments-height="4"></a-sphere>
+    <a-sphere position="2 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness=".75" wireframe="false"
+      segments-height="6" segments-height="6"></a-sphere>
+    <a-sphere position="4 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness="1" wireframe="true"
+      segments-height="8" segments-height="8"></a-sphere>
+  </a-scene> -->
+
+ <!--  <a-sphere position="-4 1 -5" scale=".5 .5 .5" radius="1.25" color="#B22937" metalness="0" wireframe="false"></a-sphere>
+      <a-circle position="-2 1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#C11C17" metalness="0" wireframe="false"></a-circle>
+      <a-cone position="-0 1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#DE5003" metalness="0" wireframe="false"></a-cone>
+      <a-cylinder position="2 1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#E27A1D" metalness="0" wireframe="false"></a-cylinder>
+      <a-dodecahedron position="3.95432 1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#E6AA19" metalness="0" wireframe="false"></a-dodecahedron>
+      <a-icosahedron position="-4 2.98839 -5" scale="0.5 0.5 0.5" radius="1.25" color="#EFCE10" metalness="0" wireframe="false"></a-icosahedron>
+      <a-octahedron position="-2 2.98839 -5" scale="0.5 0.5 0.5" radius="1.25" color="#E0E61A" metalness="0" wireframe="false"></a-octahedron>
+      <a-plane position="0.00454 2.98839 -5" scale="0.5 0.5 0.5" radius="1.25" color="#ACD62A" metalness="0" wireframe="false" rotation="45 0 0"></a-plane>
+      <a-ring position="2 2.98839 -5" scale="0.5 0.5 0.5" radius="1.25" color="#80C837" metalness="0" wireframe="false" rotation="45 0 0"></a-ring>
+      <a-tetrahedron position="4.08457 2.98839 -5" scale="0.5 0.5 0.5" radius="1.25" color="#4CA82B" metalness="0" wireframe="false"></a-tetrahedron>
+      <a-torus position="-4 -1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#228B22" metalness="0" wireframe="false"></a-torus>
+      <a-torus-knot position="-2 -1 -5" scale="0.5 0.5 0.5" radius="1.25" color="#229F6E" metalness="0" wireframe="false"></a-torus-knot>
+      <a-triangle position="0 -1 -5" scale="" radius="1.25" color="#20B2AA" metalness="0" wireframe="false"></a-triangle>
+      
+      <a-assets>
+        <img id="my-image" src="img/hud.jpg">
+      </a-assets>
+      <a-image src="#my-image" position="0 1.5 -1"></a-image>   -->
+
+      <!-- <a-assets>
+        <img id="my-image" src="img/hud.jpg">
+      </a-assets>
+      <a-curvedimage src="#my-image" height="10.0" radius="12" theta-length="120"
+      rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage> -->
+</body>
+</html>

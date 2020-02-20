@@ -17,6 +17,8 @@
     <!-- add environement to scene -->
     <a-entity environment="preset: japan; groundColor: #445;"></a-entity> 
 
+    <a-sound src="src: url(bgm.mp3)" autoplay="true" position="0 2 5"></a-sound>
+
     <a-assets> 
         <a-asset-item id="room" src="assets/models/fantasy_sky_background/scene.gltf" position="0 -1 0">
         </a-asset-item>
@@ -28,7 +30,8 @@
         </a-asset-item> 
 
         <a-asset-item id="fish" src="assets/models/the_fish_particle/scene.gltf">
-        </a-asset-item>     
+        </a-asset-item>   
+          
     
       </a-assets>
 
@@ -37,9 +40,7 @@
 
       <a-gltf-model src="#tree" scale="" position="-6.2618 0 -4.61626" gltf-model="assets/models/laying_under_a_tree_with_pink_leaves_and_wind/scene.gltf" visible=""></a-gltf-model>   
 
-        <a-gltf-model src="#fish" scale="10 10 10" position="11 0 0" gltf-model="assets/models/the_fish_particle/scene.gltf" rotation="" animation="property: rotation; from: 11 0 50; to: 11 0 0"></a-gltf-model>
-        <a-entity position="5 0 0"></a-entity>
-      </a-entity>
+      <a-gltf-model src="#fish" scale="10 10 10" position="11 0 32.183562623568164" gltf-model="assets/models/the_fish_particle/scene.gltf" rotation="11 0 0" animation="property: position; from: 11 0 50; to: 11 0 0; dir: alternate; dur: 5000; loop: 1000"></a-gltf-model>
       
     
  

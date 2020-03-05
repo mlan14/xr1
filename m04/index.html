@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>A-Frame</title>
+    <title>Basic Interactions - A-Frame</title>
     <meta name="description" content="Interactions - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
@@ -17,11 +17,12 @@
         <a-assets>
             <a-asset-item id="vase-obj" src="assets/models/maya/vase.obj"></a-asset-item>
         </a-asset-item>
- 
-        <a-mixin id="model" obj-model="obj: #vase-obj" scale=".1 .1 .1"></a-mixin> 
+
+        <!-- <a-mixin id="box" geometry="primitive: box; radius: 1"></a-mixin> -->
+        <a-mixin id="model" obj-model="obj: #vase-obj" scale=".015 .015 .015"></a-mixin>
 
         <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color dynamic-body="linearDamping:.001 angularDamping:-1" ></a-mixin>
-   
+
       </a-asset-item> 
     </a-assets>
 

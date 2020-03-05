@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <a-scene>
+    <!-- <a-scene>
         <a-assets>
             <a-asset-item id="vase-obj" src="/assets/model/vase.obj"></a-asset-item>
             <a-asset-item id="vase-mtl" src="/assets/model/vase.mtl"></a-asset-item>
@@ -17,6 +17,36 @@
           <a-entity environment="preset: forest"></a-entity>
         
           <a-entity obj-model="obj: #vase-obj; mtl: #vase-mtl"></a-entity>
+
+    </a-scene> -->
+
+    <a-scene physics="gravity: -5">
+
+        <a-assets>
+            <a-asset-item id="vase-obj" src="assets/models/vase.obj"></a-asset-item>
+        </a-asset-item>
+
+        <a-mixin id="model" obj-model="obj: #vase-obj" scale=".015 .015 .015"></a-mixin>
+
+        <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color dynamic-body="linearDamping:.001 angularDamping:-1" ></a-mixin>
+
+      </a-asset-item>
+    </a-assets>
+
+    <a-entity camera look-controls wasd-controls="acceleration:100" position="0 1 -1">
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+                  position="0 0 -1"
+                  geometry="primitive: sphere; radius: 3"
+                  visible="false"
+                  material="color: black; shader: flat"
+                  static-body>
+        </a-entity>
+      </a-entity>
+
+
+    <a-entity entity-generator="mixin: random-1 model; num: 300"></a-entity>
+
+    <a-box static-body id="ground" width=1000 height=0.001 depth=1000 visible="true"></a-box>
 
     </a-scene>
 </body>

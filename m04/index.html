@@ -14,7 +14,7 @@
 <body>
     <a-scene physics="gravity: -5">
 
-        <a-entity environment="preset: volcano; groundColor: #445;"></a-entity> 
+        <a-entity environment="preset: japan; groundColor: #445;"></a-entity> 
 
      <a-assets>
         <a-asset-item id="vase-obj" src="assets/models/maya/vase.obj"></a-asset-item>
@@ -35,9 +35,11 @@
                   material="color: black; shader: flat"
                   static-body>
         </a-entity>   
-    </a-entity> 
+    </a-entity>
 
-    <a-entity entity-generator="mixin: random-1 model; num: 300"></a-entity>   
+    <a-entity entity-generator="mixin: random-1 model; num: 300"></a-entity>
+
+    <a-box static-body id="ground" width=1000 height=0.001 depth=1000 visible="false"></a-box>
  
     </a-scene>
 </body>

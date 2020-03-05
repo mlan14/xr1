@@ -14,8 +14,10 @@
 <body>
     <a-scene physics="gravity: -5">
 
-        <a-assets>
-            <a-asset-item id="vase-obj" src="assets/models/maya/vase.obj"></a-asset-item>
+        <a-entity environment="preset: japan; groundColor: #445;"></a-entity> 
+
+     <a-assets>
+        <a-asset-item id="vase-obj" src="assets/models/maya/vase.obj"></a-asset-item>
         </a-asset-item> 
  
         <a-mixin id="model" obj-model="obj: #vase-obj" scale=".5 .5 .5"></a-mixin>

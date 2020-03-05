@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Interactions - A-Frame</title>
+    <meta name="description" content="Interactions - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="gndTexture" src="assets/img/grid.jpg">
+        </a-assets>
+
+        <!-- override the default camera and add a child entity with cursor inside -->
+        <a-entity camera look-controls wasd-controls>
+            <a-entity cursor
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="color: black; shader: flat">
+            </a-entity>
+          </a-entity>
+
+            <a-assets>
+              <a-asset-item id="vase-obj" src="/assets/model/vase.obj"></a-asset-item>
+              <a-asset-item id="vase-mtl" src="/assets/model/vase.mtl"></a-asset-item>
+            </a-assets>
+          
+            <a-entity obj-model="obj: #vase-obj; mtl: #vase-mtl"></a-entity>
+
+        <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#009688" 
+            event-set__mouseenter="_event: mouseenter; material.color: yellow"
+            event-set__mouseleave="_event: mouseleave; material.color: #009688"
+            sound="src: assets/sound/sound24.mp3; on: mouseenter">
+        </a-box>
+
+        <a-sky id="bg " color="#fff "></a-sky>
+
+        <a-plane src="#gndTexture " rotation="-90 0 0 " width="50 " height="50 "></a-plane>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>

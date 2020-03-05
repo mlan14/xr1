@@ -4,56 +4,43 @@
     <title>Basic Interactions - A-Frame</title>
     <meta name="description" content="Interactions - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
-</head>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-entity-generator-component@3.0.2/dist/aframe-entity-generator-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
+
+    </head>
 
 <body>
-    <a-scene>
+    <a-scene physics="gravity: -5">
+
         <a-assets>
-            <img id="gndTexture" src="code_week4/assets/img/grid.jpg">
-        </a-assets>
+            <a-asset-item id="vase-obj" src="assets/models/vase.obj"></a-asset-item>
+        </a-asset-item>
 
-        <!-- override the default camera and add a child entity with cursor inside -->
-        <a-entity camera look-controls wasd-controls>
-            <a-entity cursor
-                      position="0 0 -1"
-                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                      material="color: black; shader: flat">
-            </a-entity>
-          </a-entity>
+        <!-- <a-mixin id="box" geometry="primitive: box; radius: 1"></a-mixin> -->
+        <a-mixin id="model" obj-model="obj: #vase-obj" scale=".015 .015 .015"></a-mixin>
 
-        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336" 
-            event-set__mouseenter="_event: mouseenter; material.color: blue"
-            event-set__mouseleave="_event: mouseleave; material.color: #F44336"
-            sound="src: assets/sound/sound9.mp3; on: mouseenter"></a-box>
-        </a-box>
-        <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#2196F3" 
-            event-set__mouseenter="_event: mouseenter; material.color: red"
-            event-set__mouseleave="_event: mouseleave; material.color: #2196F3"
-            sound="src: assets/sound/sound20.mp3; on: mouseenter">
-        </a-box>
-        <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#009688" 
-            event-set__mouseenter="_event: mouseenter; material.color: yellow"
-            event-set__mouseleave="_event: mouseleave; material.color: #009688"
-            sound="src: assets/sound/sound24.mp3; on: mouseenter">
-        </a-box>
-        <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#E91E63" 
-            event-set__mouseenter="_event: mouseenter; material.color: purple"
-            event-set__mouseleave="_event: mouseleave; material.color: #E91E63"
-            sound="src: assets/sound/sound27.mp3; on: mouseenter">
-        </a-box>
+        <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color dynamic-body="linearDamping:.001 angularDamping:-1" ></a-mixin>
 
-        <!-- Uncomment to add laser controls for VR controllers -->
-        <!-- <a-entity laser-controls="hand: left "></a-entity>
-        <a-entity laser-controls="hand: right "></a-entity> -->
+      </a-asset-item>
+    </a-assets>
 
-        <a-sky id="bg " color="#fff "></a-sky>
+    <a-entity camera look-controls wasd-controls="acceleration:100" position="0 1 -1">
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
+                  position="0 0 -1"
+                  geometry="primitive: sphere; radius: 3"
+                  visible="false"
+                  material="color: black; shader: flat"
+                  static-body>
+        </a-entity>
+      </a-entity>
 
-        <a-plane src="#gndTexture " rotation="-90 0 0 " width="50 " height="50 "></a-plane>
 
-        <a-camera>
-            <a-cursor></a-cursor>
-        </a-camera>
+    <a-entity entity-generator="mixin: random-1 model; num: 300"></a-entity>
+
+    <a-box static-body id="ground" width=1000 height=0.001 depth=1000 visible="true"></a-box>
+
     </a-scene>
 </body>
 

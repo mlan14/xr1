@@ -1,30 +1,31 @@
+
+<!DOCTYPE html>
 <html>
 
 <head>
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
-    <!-- import randomizer component -->
-    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
-    <!-- import entity generator component -->
-    <script src="https://unpkg.com/aframe-entity-generator-component@3.0.2/dist/aframe-entity-generator-component.min.js"></script>
-   
-
 </head>
 
 <body>
-    <a-scene>
 
-        <a-assets background="color:black;" fog="type: linear; color: #AAA">
-        <a-mixin id="box" geometry="primitive: box; radius: 1"></a-mixin>
-        <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10"></a-mixin>
-        <a-mixin id="red" material="color: #FF4B68"></a-mixin>
-    </a-assets>
 
-    <a-entity entity-generator="mixin: random-1 red box; num: 100"></a-entity>
+        <a-scene background="color:black;" fog="type: linear; color: #AAA">
+            <a-entity geometry="primitive: sphere" 
+            material="color: red; emissive: red; emissiveIntensity: 1;" 
+            scale=".5 .5 .5" 
+            light="type:point;
+            castShadow:true;
+            intensity:2.0;
+            color:gray;
+            distance:50;" position="4 4 -4"
+            light="type: point; intensity: 2.0; color: red;"></a-entity>
+            
+            <a-plane width="40" shadow="receive: true" height="40" color="red" position="0 -1 -4" rotation="-90 0 0">
+            </a-plane>
+            <a-box width="1" height="1" depth="1" shadow="cast: true" color=" red " position="0 0 -4 "
+                rotation="0 45 0 ">
 
-    <a-box static-body id="ground" width=1000 height=0.001 depth=1000 visible="true"></a-box>
-
-        <a-box id="ground"  width=1000 height=0.001 depth=1000 visible="true"></a-box>
     </a-scene>
-</body> 
+</body>
+
+</html>

@@ -29,6 +29,8 @@
 
             <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1"></a-mixin>
             <a-mixin id="random-2" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" ></a-mixin>
+            <a-mixin id="random-3" random-position="min: -10 -10 -10; max: 10 10 10" visible="false"
+                    event-set__resvis="_event: click; visible: false"></a-mixin>
 
             <a-mixin id="red" material="color: #FFB7A1"></a-mixin>
             <a-mixin id="blue" material="color: #C2D7D0"></a-mixin>
@@ -77,7 +79,7 @@
     <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#AA0000"
         event-set__mouseenter="material.color: #FF00000"
         event-set__1="_event: mouseleave; material.color: #AA0000"
-        event-set__enter="_event: click; _target: #vis; visible: true"></a-box>
+        event-set__enter="_event: click; _target: #random-3; visible: true"></a-box>
 
 
     <a-box id="vis" color="#AA0000" position="0 3 -7" visible="false"

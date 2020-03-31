@@ -27,7 +27,6 @@
 
             <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" position="0 -20 0"></a-mixin>
             <a-mixin id="random-2" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" ></a-mixin>
-            <a-mixin id="random-3" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" ></a-mixin>
 
             <a-mixin id="red" material="color: #FFB7A1"></a-mixin>
             <a-mixin id="blue" material="color: #C2D7D0"></a-mixin>
@@ -50,26 +49,26 @@
         
 
         <!-- <-----> 
-
-        <a-box geometry="primitive: box ; " position="-3 1 -5" rotation="0 90 30" scale="" color="#FFB7A1" 
+    <!-- Left last box -->
+        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#FFB7A1" 
         event-set__click="material.color: red; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #FFB7A1"
         event-set__enter="_event: mouseenter; _target: #bg; color: #FFB7A1"></a-box>
-
-    <a-box geometry="primitive: box; " position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#C2D7D0" 
+    <!-- Left second box -->
+    <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#C2D7D0" 
         event-set__click="material.color: purple; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #C2D7D0"
         event-set__enter="_event: mouseenter; _target: #bg; color: #C2D7D0"></a-box>
-   
-    <a-box geometry="primitive: box; " position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="##EFBC68"
-        event-set__click="material.color: magenta; scale: 2 2 2"
-        event-set__mouseenter="material.color: white"
-        event-set__1="_event: mouseleave; material.color: #EFBC68"
-        event-set__enter="_event: mouseenter; _target: #bg; color: #EFBC68"></a-box>
-
-    <a-box geometry="primitive: box; " position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#5F9595"
+    <!-- Right second box -->
+    <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#AA0000"
+        event-set__mouseenter="material.color: #FF00000"
+        event-set__1="_event: mouseleave; material.color: #AA0000"
+        event-set__enter="_event: click; _target: #vis; visible: true"></a-box>
+    
+    <!-- Right last box -->
+    <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#5F9595"
         event-set__click="material.color: blue; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #5F9595"
@@ -77,13 +76,14 @@
 
     </a-box>
 
-    <!-- Uncomment to add laser controls for VR controllers -->
-    <!-- <a-entity laser-controls="hand: left "></a-entity>
-    <a-entity laser-controls="hand: right "></a-entity> -->
 
-    <!-- <a-sky id="bg " color="#fff "></a-sky> -->
-    <a-sky id="bg" color="#fff"></a-sky>
-    <!-- <a-plane id="ground" rotation="-90 0 0 " width="50" height="50" color="green"></a-plane> -->
+
+    <a-box id="vis" color="#AA0000" position="0 3 -7"
+            event-set__resvis="event:click;visible:false">
+
+    </a-box>
+    <a-sky id="bg" color="FFFFFF"></a-sky>
+    
 
     <a-camera>
         <a-cursor></a-cursor>

@@ -21,9 +21,9 @@
    <a-scene physics="gravity: .005">
 
         <a-assets>
-            <a-mixin id="box" geometry="primitive: box; radius: 1" material="side: double" scale="1 1 1"></a-mixin>
-            <a-mixin id="box-2" geometry="primitive: box; radius: 2" material="side: double" scale="1 1 1"></a-mixin>
-            <a-mixin id="box-3" geometry="primitive: box; radius: .5" material="side: double" scale="1 1 1"></a-mixin>
+            <a-mixin id="box" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
+            <a-mixin id="box-2" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
+            <a-mixin id="box-3" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
 
             <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" position="0 -20 0"></a-mixin>
             <a-mixin id="random-2" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" ></a-mixin>
@@ -52,25 +52,25 @@
 
         <!-- <-----> 
 
-        <a-box geometry="primitive: box ; radius: 1" position="-3 1 -5" rotation="0 90 30" scale="" color="#FFB7A1" 
+        <a-box geometry="primitive: box ; " position="-3 1 -5" rotation="0 90 30" scale="" color="#FFB7A1" 
         event-set__click="material.color: red; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #FFB7A1"
         event-set__enter="_event: mouseenter; _target: #bg; color: #FFB7A1"></a-box>
 
-    <a-box geometry="primitive: box; radius: 1" position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#C2D7D0" 
+    <a-box geometry="primitive: box; " position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#C2D7D0" 
         event-set__click="material.color: purple; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #C2D7D0"
         event-set__enter="_event: mouseenter; _target: #bg; color: #C2D7D0"></a-box>
    
-    <a-box geometry="primitive: box; radius: 1" position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="##EFBC68"
+    <a-box geometry="primitive: box; " position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="##EFBC68"
         event-set__click="material.color: magenta; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #EFBC68"
         event-set__enter="_event: mouseenter; _target: #bg; color: #EFBC68"></a-box>
 
-    <a-box geometry="primitive: box; radius: 1" position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#5F9595"
+    <a-box geometry="primitive: box; " position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#5F9595"
         event-set__click="material.color: blue; scale: 2 2 2"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #5F9595"

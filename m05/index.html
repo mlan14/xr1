@@ -18,7 +18,6 @@
         <a-mixin id="box" geometry="primitive: box; radius: 1"></a-mixin>
         <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color ></a-mixin>
     </a-assets>
-
     <a-entity entity-generator="mixin: random-1 red box; num: 100"></a-entity>
 
     <a-box static-body="sphereRadius: NaN" id="ground" width="1000" height="0.001" depth="1000" visible="" material="emissive: #000000" geometry="" velocity=""></a-box>

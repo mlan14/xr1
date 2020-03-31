@@ -21,11 +21,13 @@
    <a-scene physics="gravity: .005">
 
         <a-assets>
-            <a-mixin id="box" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
+            <a-mixin id="box-1" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
             <a-mixin id="box-2" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
             <a-mixin id="box-3" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
+            <a-mixin id="box-4" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
+            
 
-            <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" position="0 -20 0"></a-mixin>
+            <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color></a-mixin>
             <a-mixin id="random-2" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1" ></a-mixin>
 
             <a-mixin id="red" material="color: #FFB7A1"></a-mixin>
@@ -45,7 +47,6 @@
         <a-entity entity-generator="mixin: random-2 blue box-2; num: 100"></a-entity>
         <a-entity entity-generator="mixin: random-3 yellow box-3; num: 100"></a-entity>
         <a-entity entity-generator="mixin: random-4 green box; num: 100"></a-entity>
-
         
 
         <!-- <-----> 

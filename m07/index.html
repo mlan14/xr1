@@ -18,7 +18,7 @@
 </head>
 <body> 
 
-   <a-scene physics="gravity: .005">
+   <a-scene physics="gravity: .01">
 
         <a-assets>
             <a-mixin id="box-1" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>            
@@ -31,7 +31,7 @@
     
         <a-sound src="#space-sound" autoplay="true" loop="true" volume="2"></a-sound>
     
-        <a-entity entity-generator="mixin: random-1 black box-1; num: 100"></a-entity>
+        <a-entity entity-generator="mixin: random-1 black box-1; num: 50"></a-entity>
         
 
         <!-- <-----> 

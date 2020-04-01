@@ -73,10 +73,15 @@
     <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#AA0000"
         event-set__mouseenter="material.color: #FF00000"
         event-set__1="_event: mouseleave; material.color: #AA0000"
-        event-set__enter="_event: click; _target: #visrandom; visible: true"></a-box>
+        event-set__enter="_event: click; _target: #vis; visible: true"></a-box>
     
     <a-box id="vis" color="#AA0000" position="0 3 -7" visible="false"
             event-set__resvis="_event: click; visible: false">
+            <a-animation attribute="rotation"
+                        to="0 360 0"
+                        repeat="indefinite"
+                        dur="5000"
+                        easing="linear"></a-animation>
     </a-box>
     <a-sky id="bg" color="FFFFFF"></a-sky>
     

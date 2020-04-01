@@ -33,31 +33,58 @@
     
         <a-entity entity-generator="mixin: random-1 black box-1; num: 50"></a-entity>
         
+    <!-- Back Left first box -->
+        <a-box position="-7 3 -8.644" scale="1.4 1.4 1.4" color="#414042" 
+                event-set__mouseenter="material.color: white"
+                event-set__1="_event: mouseleave; material.color: #675121" 
+                event-set__enter="_event: mouseenter; _target: #vis; visible: true" ></a-box>
+             <a-box id="vis-1" color="#675121" position="-9 0.5 -8" 
+                visible="" event-set__resvis="_event: mouseenter; visible: false">
+                    <a-animation attribute="rotation" 
+                                to="0 360 0" 
+                                repeat="indefinite" 
+                                dur="5000" 
+                                easing="linear"></a-animation>
+            </a-box>
 
-        <!-- <-----> 
-    <!-- Left last box -->
-        <a-box position="-3 1 -5"  scale="" color="#414042" 
+    <!-- Ahead Left first box -->
+            <a-box position="-4 3.5 -4" scale="1.5 1.5 1.5" color="#414042" 
+                event-set__mouseenter="material.color: white"
+                event-set__1="_event: mouseleave; material.color: #675322" 
+                event-set__enter="_event: mouseenter; _target: #vis; visible: true"></a-box>
+                <a-box id="vis-2" color="#675322" position="-5 6 -18"  scale="1.6 1.6 1.6"
+                visible="" event-set__resvis="_event: mouseenter; visible: false">
+                    <a-animation attribute="rotation" 
+                                to="0 360 0" 
+                                repeat="indefinite" 
+                                dur="5000" 
+                                easing="linear"></a-animation>
+            </a-box>
+
+    <!-- Center Left first box -->
+        <a-box position="-3 1 -5"  scale="1 1 1" color="#414042" 
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #F4A576"
         event-set__enter="_event: mouseenter; _target: #bg; color: #F4A576"></a-box>
+
     <!-- Left second box -->
-    <a-box position=" -1 2 -5 "  scale="0.75 0.75 0.75 " color="#414042" 
+    <a-box position=" -1 2 -5 "  scale="1.1 1.1 1.1 " color="#414042" 
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #F9C395"
         event-set__enter="_event: mouseenter; _target: #bg; color: #F9C395"></a-box>
     
     
-    <!-- Right last box -->
+    <!-- Right first box -->
     <a-box position="1 1 -5 " scale="0.9 0.9 0.9 " color="#414042"
         event-set__mouseenter="material.color: wihte"
         event-set__1="_event: mouseleave; material.color: #F7BB40""
         event-set__enter="_event: mouseenter; _target: #bg; color: #F7BB40"></a-box>
 
     <!-- Right second box -->
-    <a-box position="2 2 -4 " scale="0.75 0.75 0.75 " color="#414042"
+    <a-box position="2 2 -4 " scale="0.7 0.7 0.7 " color="#414042"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #B85627"
-        event-set__enter="_event: mouseenter; _target: #vis; visible: true">
+        event-set__enter="_event: mouseenter; _target: #vis-3; visible: true">
         <a-animation attribute="rotation"
                         to="0 360 0"
                         repeat="indefinite"
@@ -65,7 +92,7 @@
                         easing="linear"></a-animation>
     </a-box>
     
-    <a-box id="vis" color="#B85627" position="0 3 -7" visible="false"
+    <a-box id="vis-3" color="#B85627" position="0 3 -7" scale="1.7 1.7 1.7" visible="false" 
             event-set__resvis="_event: mouseenter; visible: false">
             <a-animation attribute="rotation"
                         to="0 360 0"
@@ -77,8 +104,8 @@
     <a-sky id="bg" color="#000000"></a-sky>
     
 
-    <a-camera>
-        <a-cursor></a-cursor>
+    <a-camera camera="" position="0.00 2.00 -0.7" rotation="0 0 0">
+        <a-cursor position="0 -0.5 -1"></a-cursor></a-cursor>
     </a-camera>
 
 

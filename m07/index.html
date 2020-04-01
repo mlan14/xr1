@@ -60,13 +60,8 @@
     event-set__1="_event: mouseleave; material.color: #675121" 
     event-set__enter="_event: mouseenter; _target: #vis-1; visible: true" ></a-box>
  
-    <a-box id="vis-1" color="#675121" position="-9 0.5 -8" 
-    visible="" event-set__resvis="_event: mouseenter; visible: false">
-        <a-animation attribute="rotation" 
-                    to="0 360 0" 
-                    repeat="indefinite" 
-                    dur="5000" 
-                    easing="linear"></a-animation>
+    <a-box id="vis-1" color="#675121" position="-9 0.5 -8" visible="false" 
+    event-set__resvis="_event: mouseenter; visible: false">
     </a-box>
 
     <!-- Ahead Left first box -->
@@ -75,13 +70,8 @@
             event-set__1="_event: mouseleave; material.color: #675322" 
             event-set__enter="_event: mouseenter; _target: #vis-2; visible: true"></a-box>
    
-        <a-box id="vis-2" color="#675322" position="-5 6 -18"  scale="1.6 1.6 1.6"
-            visible="" event-set__resvis="_event: mouseenter; visible: false">
-        <a-animation attribute="rotation" 
-                    to="0 360 0" 
-                    repeat="indefinite" 
-                    dur="5000" 
-                    easing="linear"></a-animation>
+        <a-box id="vis-2" color="#675322" position="-5 6 -18"  scale="1.6 1.6 1.6" visible="false" 
+            event-set__resvis="_event: mouseenter; visible: false">
     </a-box>
 
     <!-- Right second box -->
@@ -89,11 +79,6 @@
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #B85627"
         event-set__enter="_event: mouseenter; _target: #vis-3; visible: true">
-        <a-animation attribute="rotation"
-                        to="0 360 0"
-                        repeat="indefinite"
-                        dur="5000"
-                        easing="linear"></a-animation>
     </a-box>
     
     <a-box id="vis-3" color="#B85627" position="0 3 -7" scale="1.7 1.7 1.7" visible="false" 

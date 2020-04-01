@@ -25,41 +25,15 @@
 
             <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" dynamic-body="linearDamping:0 angularDamping: 1"></a-mixin> 
             
-            <audio id="space-sound" crossorigin="anonymous" preload="auto" src="assets/sound/sound-1.mp3"></audio>
+            <!-- <audio id="space-sound" crossorigin="anonymous" preload="auto" src="assets/sound/sound-1.mp3"></audio> -->
 
         </a-assets>
     
-        <a-sound src="#space-sound" autoplay="true" loop="true" volume="2"></a-sound>
+        <!-- <a-sound src="#space-sound" autoplay="true" loop="true" volume="2"></a-sound> -->
     
         <a-entity entity-generator="mixin: random-1 black box-1; num: 50"></a-entity>
         
-    <!-- Back Left first box -->
-        <a-box position="-7 3 -8.644" scale="1.4 1.4 1.4" color="#414042" 
-                event-set__mouseenter="material.color: white"
-                event-set__1="_event: mouseleave; material.color: #675121" 
-                event-set__enter="_event: mouseenter; _target: #vis; visible: true" ></a-box>
-             <a-box id="vis-1" color="#675121" position="-9 0.5 -8" 
-                visible="" event-set__resvis="_event: mouseenter; visible: false">
-                    <a-animation attribute="rotation" 
-                                to="0 360 0" 
-                                repeat="indefinite" 
-                                dur="5000" 
-                                easing="linear"></a-animation>
-            </a-box>
-
-    <!-- Ahead Left first box -->
-            <a-box position="-4 3.5 -4" scale="1.5 1.5 1.5" color="#414042" 
-                event-set__mouseenter="material.color: white"
-                event-set__1="_event: mouseleave; material.color: #675322" 
-                event-set__enter="_event: mouseenter; _target: #vis; visible: true"></a-box>
-                <a-box id="vis-2" color="#675322" position="-5 6 -18"  scale="1.6 1.6 1.6"
-                visible="" event-set__resvis="_event: mouseenter; visible: false">
-                    <a-animation attribute="rotation" 
-                                to="0 360 0" 
-                                repeat="indefinite" 
-                                dur="5000" 
-                                easing="linear"></a-animation>
-            </a-box>
+    
 
     <!-- Center Left first box -->
         <a-box position="-3 1 -5"  scale="1 1 1" color="#414042" 
@@ -79,6 +53,35 @@
         event-set__mouseenter="material.color: wihte"
         event-set__1="_event: mouseleave; material.color: #F7BB40""
         event-set__enter="_event: mouseenter; _target: #bg; color: #F7BB40"></a-box>
+
+    <!-- Back Left first box -->
+    <a-box position="-7 3 -8.644" scale="1.4 1.4 1.4" color="#414042" 
+    event-set__mouseenter="material.color: white"
+    event-set__1="_event: mouseleave; material.color: #675121" 
+    event-set__enter="_event: mouseenter; _target: #vis; visible: true" ></a-box>
+ 
+    <a-box id="vis-1" color="#675121" position="-9 0.5 -8" 
+    visible="" event-set__resvis="_event: mouseenter; visible: false">
+        <a-animation attribute="rotation" 
+                    to="0 360 0" 
+                    repeat="indefinite" 
+                    dur="5000" 
+                    easing="linear"></a-animation>
+    </a-box>
+
+    <!-- Ahead Left first box -->
+    <a-box position="-4 3.5 -4" scale="1.5 1.5 1.5" color="#414042" 
+            event-set__mouseenter="material.color: white"
+            event-set__1="_event: mouseleave; material.color: #675322" 
+            event-set__enter="_event: mouseenter; _target: #vis; visible: true"></a-box>
+    <a-box id="vis-2" color="#675322" position="-5 6 -18"  scale="1.6 1.6 1.6"
+            visible="" event-set__resvis="_event: mouseenter; visible: false">
+        <a-animation attribute="rotation" 
+                    to="0 360 0" 
+                    repeat="indefinite" 
+                    dur="5000" 
+                    easing="linear"></a-animation>
+    </a-box>
 
     <!-- Right second box -->
     <a-box position="2 2 -4 " scale="0.7 0.7 0.7 " color="#414042"

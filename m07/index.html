@@ -61,7 +61,7 @@
     <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#BCBEC0"
         event-set__mouseenter="material.color: white"
         event-set__1="_event: mouseleave; material.color: #F7BB40"
-        event-set__enter="_event: mouseenter; _target: #bg; color: F7BB40"></a-box>
+        event-set__enter="_event: mouseenter; _target: #bg; color: #F7BB40"></a-box>
 
     <!-- Right second box -->
     <a-box position="2 2 -4 " scale="0.75 0.75 0.75 " color="#BCBEC0"
@@ -77,8 +77,14 @@
     
     <a-box id="vis" color="#F8EFE7" position="0 3 -7" visible="false"
             event-set__resvis="_event: click; visible: false">
-        
+            <a-animation attribute="rotation"
+                        to="0 360 0"
+                        repeat="indefinite"
+                        dur="5000"
+                        easing="linear"></a-animation>
     </a-box>
+
+
     <a-sky id="bg" color="#FFFFFF"></a-sky>
     
 

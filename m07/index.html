@@ -51,38 +51,38 @@
 
         <!-- <-----> 
     <!-- Left last box -->
-        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#FFB7A1" 
+        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#BCBEC0" 
         event-set__mouseenter="material.color: white"
-        event-set__1="_event: mouseleave; material.color: #FFB7A1"
-        event-set__enter="_event: mouseenter; _target: #bg; color: #FFB7A1"></a-box>
+        event-set__1="_event: mouseleave; material.color: #F4A576"
+        event-set__enter="_event: mouseenter; _target: #bg; color: #F4A576"></a-box>
     <!-- Left second box -->
-    <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#C2D7D0" 
+    <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#BCBEC0" 
         event-set__mouseenter="material.color: white"
-        event-set__1="_event: mouseleave; material.color: #C2D7D0"
-        event-set__enter="_event: mouseenter; _target: #bg; color: #C2D7D0"></a-box>
+        event-set__1="_event: mouseleave; material.color: #F9C395"
+        event-set__enter="_event: mouseenter; _target: #bg; color: #F9C395"></a-box>
     
     
     <!-- Right last box -->
-    <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#5F9595"
+    <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#BCBEC0"
         event-set__mouseenter="material.color: white"
-        event-set__1="_event: mouseleave; material.color: #5F9595"
-        event-set__enter="_event: click; _target: #visrandom; visible: true">
-
-    </a-box>
+        event-set__1="_event: mouseleave; material.color: #F7BB40"
+        event-set__enter="_event: mouseenter; _target: #bg; color: F7BB40"></a-box>
 
     <!-- Right second box -->
-    <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#AA0000"
+    <a-box position="2 2 -4 " scale="0.75 0.75 0.75 " color="#BCBEC0"
         event-set__mouseenter="material.color: #FF00000"
-        event-set__1="_event: mouseleave; material.color: #AA0000"
-        event-set__enter="_event: click; _target: #vis; visible: true"></a-box>
-    
-    <a-box id="vis" color="#AA0000" position="0 3 -7" visible="false"
-            event-set__resvis="_event: click; visible: false">
+        event-set__1="_event: mouseleave; material.color: #F8EFE7"
+        event-set__enter="_event: click; _target: #vis; visible: true">
         <a-animation attribute="rotation"
                         to="0 360 0"
                         repeat="indefinite"
                         dur="5000"
                         easing="linear"></a-animation>
+    </a-box>
+    
+    <a-box id="vis" color="#F8EFE7" position="0 3 -7" visible="false"
+            event-set__resvis="_event: click; visible: false">
+        
     </a-box>
     <a-sky id="bg" color="FFFFFF"></a-sky>
     

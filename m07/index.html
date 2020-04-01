@@ -21,11 +21,7 @@
    <a-scene physics="gravity: .005">
 
         <a-assets>
-            <a-mixin id="box-1" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
-            <a-mixin id="box-2" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
-            <a-mixin id="box-3" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
-            <a-mixin id="box-4" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>
-            
+            <a-mixin id="box-1" geometry="primitive: box; " material="side: double" scale="1 1 1"></a-mixin>            
 
             <a-mixin id="random-1" random-position="min: -10 -10 -10; max: 10 10 10" random-color dynamic-body="linearDamping:0 angularDamping: 1"></a-mixin>
 
@@ -42,10 +38,9 @@
         <a-sound src="#space-sound" autoplay="true" loop="true" volume="2"></a-sound>
     
 
-        <a-entity id="visrandom" entity-generator="mixin: random-1 red box-3; num: 200" visible="false"
-        event-set__resvis="_event: click; visible: false"></a-entity>
-        <a-entity entity-generator="mixin: random-2 blue box-2; num: 100"></a-entity>
-        <a-entity entity-generator="mixin: random-3 yellow box-3; num: 100"></a-entity>
+        <a-entity entity-generator="mixin: random-1 red box-1; num: 100"></a-entity>
+        <a-entity entity-generator="mixin: random-2 blue box-1; num: 100"></a-entity>
+        <a-entity entity-generator="mixin: random-3 yellow box-1; num: 100"></a-entity>
         <a-entity entity-generator="mixin: random-4 green box-1; num: 100" ></a-entity>
         
 

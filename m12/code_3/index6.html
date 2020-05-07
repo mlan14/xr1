@@ -9,12 +9,12 @@
     <a-scene embedded arjs>
         <!-- Aframe asset system. preload assets here -->
         <a-assets>
-            <a-asset-item id="robot" src="models/wheel1_out/wheel1.gltf" >
+            <a-asset-item id="robot" src="models/Stand_out/Stand.gltf" >
         </a-assets>
 
         <!-- create your content here. just a box for now -->
         <!-- add animation-mixer inside GLTF model for animation -->
-        <a-entity position='0 1.5 0' scale="50 50 50">
+        <a-entity position='0 1.5 0' >
             <a-gltf-model position="0 0 0" src="#robot" animation-mixer >
                 <!-- place sound inside model for spatial sound -->
                 <a-sound src="sound/magic.mp3" autoplay="true"></a-sound> 

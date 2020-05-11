@@ -46,20 +46,6 @@
         <a-entity environment="preset: starry; active: true; skyType: atmosphere; skyColor: #88c; 
         horizonColor: #ddd; lightPosition: 0 -0.01 -0.46; fog: 0.7; 
         dressingAmount: 100;  gridColor: black" visible="">
-            <a-entity class="environment" position="0 50 0" 
-                light="type: hemisphere; color: #CEE4F0; intensity: 0.089; groundColor: #553e35" 
-                visible="">
-            </a-entity>
-            <a-entity class="environment" position="0 -0.01 -0.46" 
-                light="intensity: 0.089; shadowCameraLeft: -10; shadowCameraBottom: -10; 
-                shadowCameraRight: 10; shadowCameraTop: 10" 
-                visible="false">
-            </a-entity>
-            <a-entity rotation="-90 0 0" class="environmentGround environment" 
-                visible="false" scale="1 1 1" shadow="cast: false; receive: false">
-            </a-entity>
-            <a-entity class="environmentDressing environment" visible="false">
-            </a-entity>
             <a-sky id="bg" color="black" radius="200" theta-length="110" class="environment" 
                 material="shader: skyshader; sunPosition: 0 -0.021733995409215574 -0.9997637888239164"  
                 visible="false" geometry="">
@@ -69,7 +55,7 @@
 
         <!-- camera -->
         <a-entity camera
-                position="-1.5 6 1"
+                position="0 4 0"
                 look-controls="pointerLockEnabled: true">
             <a-entity cursor
                 position="0 0 -1"

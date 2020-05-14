@@ -32,8 +32,22 @@
 
     <a-assets>
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
+      <a-asset-item id="jelly-glb" src="jellyfish-model.glb"></a-asset-item>
+      
+      <a-asset-item id="person" src="modeltest.glb"></a-asset-item>
 
-      <a-asset-item id="wheel" src="assets/wheel2.glb" position="0 0 0"></a-asset-item>
+      <a-asset-item id="wheel" src="wheel1.glb" scale=".5 .5 .5" position="0 0 0"></a-asset-item>
+      
+      <img id="jelly-thumb" src="targets/video-target.jpg">
+      <video
+        id="jelly-video"
+        autoplay
+        muted
+        crossorigin="anonymous"
+        loop="true"
+        src="jellyfish-video.mp4">
+      </video>
+    </a-assets>
 
     <a-camera
       position="0 4 10"
@@ -44,6 +58,25 @@
     <a-light type="directional" intensity="0.5" position="1 1 1"></a-light>
 
     <a-light type="ambient" intensity="1"></a-light>
+
+    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+    <a-entity
+      xrextras-named-image-target="name: video-target"
+      xrextras-play-video="video: #jelly-video; thumb: #jelly-thumb; canstop: true"
+      geometry="primitive: plane; height: 1; width: 0.79;">
+    </a-entity>
+
+    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+    <a-entity xrextras-named-image-target="name: model-target">
+      <!-- Add a child entity that can be rotated independently of the image target. -->
+      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb"></a-entity>
+    </a-entity>
+
+    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+    <a-entity xrextras-named-image-target="name: tools">
+      <!-- Add a child entity that can be rotated independently of the image target. -->
+      <a-entity xrextras-one-finger-rotate gltf-model="#person" ></a-entity>
+    </a-entity>
 
      <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
      <a-entity xrextras-named-image-target="name: parking">

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<script src="https://aframe.io/releases/1.0.2/aframe.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="js/aframe-ar.min.js"></script>
+<script src="js/aframe-shader-frog.js"></script>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+    <!-- <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - example for a-frame
+        <br />
+        Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+    </div> -->
+    <!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
+    <a-scene embedded arjs='sourceType: webcam;'>
+
+        <!-- <a-marker preset="hiro"> -->
+
+            <a-marker-camera type="pattern" url="pattern.patt">
+
+                <a-sphere position="0 0.51 0" scale="0.3 0.3 0.3" radius="1.25" color="#EF2D5E"
+                shader-frog="src:url(https://raw.githubusercontent.com/mhellar/aframestuff/gh-pages/basic4/shaders/Acid_Glow_Shader.json)"
+                animation__rotation="property: rotation; dir: alternate; dur: 10000;
+                                          easing: easeInSine; loop: true; to: 0 360 0">
+                </a-sphere>
+                <a-sphere position="0 0.5 0" scale="0.4 0.4 0.4" radius="1.25" color="#EF2D5E" wireframe="true" wireframe-linewidth="2"
+                animation__color="property: material.color; dir: alternate; dur: 3000;
+                                          easing: easeInSine; loop: true; to: #FFF"
+                animation__segmentw="property: segments-width; dir: alternate; dur: 3000;
+                                          easing: easeInSine; loop: true; from: 8; to: 36"
+                animation__segmenth="property: segments-height; dir: alternate; dur: 3000;
+                                          easing: easeInSine; loop: true; from: 8; to: 18"></a-sphere>
+                <!-- <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
+                <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane> -->
+            </a-marker-camera>
+
+        <!-- </a-marker> -->
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>

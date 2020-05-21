@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Natural Sound - Sleeping at night</title>
+    <meta name="asmr" content="Natural Sound - Sleeping at night">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-entity-generator-component@3.0.2/dist/aframe-entity-generator-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    <!-- environment -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <!-- camera -->
+    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
+    <!-- sounds -->
+    <script src="assets/components/sound1.js"></script>
+</head>
+<body> 
+
+   <a-scene>
+
+        <a-assets>
+            <a-mixin id="icosahedron-1" geometry="primitive: icosahedron; " material="side: double" scale=".5 .5 .5"></a-mixin>            
+            <a-mixin id="random-1" random-position="min: 0 20 0; max: 0 0 0" dynamic-body="linearDamping:0 angularDamping: 3"></a-mixin> 
+                     
+            <a-mixin id="icosahedron-2" geometry="primitive: icosahedron; radius: 1" scale=".3 .3 .3"></a-mixin>
+            <a-mixin id="random-2" random-position="min: -15 -5 -15; max: 15 25 15" material="color:white" ></a-mixin>
+            
+            <audio id="sound1" crossorigin="anonymous" src="assets/sound/Rain.mp3"></audio>
+
+            <audio id="sound2" crossorigin="anonymous" src="assets/sound/Campfire.mp3"></audio>
+            
+            <audio id="sound3" crossorigin="anonymous" src="assets/sound/Deepwater.mp3"></audio>
+            
+            <audio id="sound4" crossorigin="anonymous" src="assets/sound/Thunder.mp3"></audio>
+            
+            <audio id="sound5" crossorigin="anonymous" src="assets/sound/Wave.mp3"></audio>
+
+            <img id="bg" src="assets/img/galaxy1.jpg">
+        </a-assets>
+
+        <a-entity entity-generator="mixin: random-1 black icosahedron-1; num: 200" ></a-entity>
+        
+        <a-entity entity-generator="mixin: random-2 black icosahedron-2; num: 300"></a-entity>
+
+        <!-- sounds cubes -->
+        <a-entity position="-7 6 -4" >
+            <a-icosahedron class="icosahedron" audiohandler="src: sound1" 
+                color="white" scale="0.75 0.75 0.75" rotation="0 0 0"
+                event-set__enter="_event: mouseenter; color: #ff9f1c"
+                event-set__leave="_event: mouseleave; color: white"  
+                animation__rotation="property: rotation; dur: 8000; easing: linear; loop: true; to: 0 360 0">
+          </a-entity>
+
+        <a-entity position="-1 6 -8">
+            <a-icosahedron class="icosahedron" audiohandler="src: sound2" 
+                rotation="0 0 0" scale="0.75 0.75 0.75" color="white" 
+                event-set__enter="_event: mouseenter; color: #bdb2ff"
+                event-set__leave="_event: mouseleave; color: white"  
+                animation__rotation="property: rotation; dur: 8000; easing: linear; loop: true; to: 0 360 0" >
+            </a-icosahedron>
+        </a-entity>
+
+        <a-entity position="-4 6 -6">
+            <a-icosahedron  class="icosahedron" audiohandler="src: sound3" 
+                rotation="0 0 0" scale="0.75 0.75 0.75" color="white" 
+                event-set__enter="_event: mouseenter; color: #007b8a"
+                event-set__leave="_event: mouseleave; color: white"  
+                animation__rotation="property: rotation; dur: 8000; easing: linear; loop: true; to: 0 360 0">
+            </a-icosahedron>
+        </a-entity>
+
+        <a-entity position="2 6 -6" >
+            <a-icosahedron class="icosahedron" audiohandler="src: sound4" 
+                rotation="0 0 0" scale="0.75 0.75 0.75" color="white" 
+                event-set__enter="_event: mouseenter; color: #88d498"
+                event-set__leave="_event: mouseleave; color: white" 
+                animation__rotation="property: rotation; dur: 8000; easing: linear; loop: true; to: 0 360 0">
+            </a-icosahedron>
+        </a-entity>
+
+        <a-entity position="5 6 -4" >
+            <a-icosahedron class="icosahedron" audiohandler="src: sound5" 
+                rotation="0 0 0" scale="0.75 0.75 0.75" color="white" 
+                event-set__enter="_event: mouseenter; color: #ff6b6b"
+                event-set__leave="_event: mouseleave; color: white" 
+                animation__rotation="property: rotation; dur: 8000; easing: linear; loop: true; to: 0 360 0">
+            </a-icosahedron>
+        </a-entity>
+
+    <!-- environment -->
+    <a-curvedimage src="#bg" height="30.0" radius="12" theta-length="120" 
+        rotation="" scale="2 2 2" material="" geometry="primitive: icosahedron; radius: 15" 
+        position="0 6 0">
+    </a-curvedimage>
+
+        <!-- camera -->
+        <a-entity camera
+                position="0 4 0"
+                look-controls="pointerLockEnabled: true">
+            <a-entity cursor
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                material="color: #CCC; shader: flat;">
+            </a-entity>
+        </a-entity>
+
+        <!-- light -->
+        <a-light type="point" color="#fffff" position="0 10 0" angle="90" 
+            light="color: #6e838c; angle: 0; castShadow: true" scale="0.5 0.5 0.5">
+        </a-light>
+  
+    </a-scene>
+
+</body>
+
+</html>
